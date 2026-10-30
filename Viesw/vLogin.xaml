@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jjjitalaExamen.Viesw.vLogin" Title="Login">
+    <ScrollView>
+        <VerticalStackLayout 
+            Padding="20" 
+            Spacing="10">
+            <Image Source="login.jpg"
+                   HeightRequest="180"
+                   HorizontalOptions="Center"
+                   Aspect="AspectFit"
+                   SemanticProperties.Description="Imagen de inicio de sesión" />
+            <Label 
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center" 
+                   Text="Login" />
+            <Grid 
+                  RowSpacing="15" 
+                  ColumnSpacing="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label 
+                    HorizontalTextAlignment="Center" 
+                    VerticalTextAlignment="Center" 
+                    Text="Usuario" 
+                    Grid.Row="0" 
+                    Grid.Column="0" />
+                <Entry 
+                    HorizontalTextAlignment="Start" 
+                    VerticalOptions="Center" 
+                    x:Name="txtUsuario" 
+                    Grid.Row="0" 
+                    Grid.Column="1" />
+                <Label 
+                    HorizontalTextAlignment="Center" 
+                    VerticalTextAlignment="Center" 
+                    Text="Contraseña" 
+                    Grid.Row="1" 
+                    Grid.Column="0" />
+                <Entry 
+                    HorizontalTextAlignment="Start" 
+                    VerticalOptions="Center" 
+                    x:Name="txtContrasena" 
+                    IsPassword="True" 
+                    Grid.Row="1" 
+                    Grid.Column="1" />
+                <Button x:Name="btnIniciarSesion" 
+                    VerticalOptions="Center" 
+                    Text="Iniciar sesión" 
+                    Clicked="btnIniciarSesion_Clicked" 
+                    Grid.Row="2" 
+                    Grid.Column="0" 
+                    Grid.ColumnSpan="2" />
+            </Grid>
+            <Button x:Name="btnAcercaDe" 
+                VerticalOptions="Center" 
+                Text="Acerca de" 
+                Clicked="btnAcercaDe_Clicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+
+

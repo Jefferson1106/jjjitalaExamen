@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jjjitalaExamen.Viesw.vRegistro" Title="Registro">
+    <ScrollView>
+        <VerticalStackLayout 
+            Padding="20" 
+            Spacing="20">
+            <Label 
+                HorizontalTextAlignment="Center" 
+                VerticalTextAlignment="Center" 
+                x:Name="lblUsuarioConectado" />
+            <Label 
+                HorizontalTextAlignment="Center" 
+                VerticalTextAlignment="Center" 
+                Text="REGISTRO" />
+            <Grid 
+                RowSpacing="15" 
+                ColumnSpacing="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label 
+                    HorizontalTextAlignment="Center" 
+                    VerticalTextAlignment="Center" 
+                    Text="Nombre" Grid.Row="0" Grid.Column="0" />
+                <Entry 
+                    HorizontalTextAlignment="Start" 
+                    VerticalOptions="Center" 
+                    x:Name="txtNombre" 
+                    Placeholder="Ingresar nombre" 
+                    Grid.Row="1" 
+                    Grid.Column="0" />
+                <Label 
+                    HorizontalTextAlignment="Center" 
+                    VerticalTextAlignment="Center" 
+                    Text="Apellido" Grid.Row="0" Grid.Column="1" />
+                <Entry 
+                    HorizontalTextAlignment="Start" 
+                    VerticalOptions="Center" 
+                    x:Name="txtApellido" 
+                    Placeholder="Ingresar apellido" 
+                    Grid.Row="1" 
+                    Grid.Column="1" />
+                <Label 
+                    HorizontalTextAlignment="Center" 
+                    VerticalTextAlignment="Center" 
+                    Text="Edad" Grid.Row="0" Grid.Column="2" />
+                <Entry 
+                    HorizontalTextAlignment="Start" 
+                    VerticalOptions="Center" 
+                    x:Name="txtEdad" 
+                    Placeholder="Ingresar edad" 
+                    Keyboard="Numeric" 
+                    Grid.Row="1" 
+                    Grid.Column="2" />
+            </Grid>
+            <Grid 
+                RowSpacing="15" 
+                ColumnSpacing="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label 
+                    HorizontalTextAlignment="Center" 
+                    VerticalTextAlignment="Center" 
+                    Text="Fecha de inicio" 
+                    Grid.Row="0" 
+                    Grid.Column="0" />
+                <DatePicker 
+                    HorizontalOptions="Fill" 
+                    VerticalOptions="Center" 
+                    x:Name="dpFechaInicio" 
+                    Grid.Row="0" 
+                    Grid.Column="1" />
+                <Label 
+                       HorizontalTextAlignment="Center" 
+                       VerticalTextAlignment="Center" 
+                       Text="Plan" 
+                       Grid.Row="1" 
+                       Grid.Column="0" />
+                <Picker 
+                    HorizontalOptions="Fill" 
+                    VerticalOptions="Center" 
+                    x:Name="pkPlan" 
+                    Title="Seleccionar plan" 
+                    Grid.Row="1" 
+                    Grid.Column="1">
+                    <Picker.Items>
+                        <x:String>Musculación</x:String>
+                        <x:String>Cardio</x:String>
+                        <x:String>Crossfit</x:String>
+                        <x:String>Full</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label 
+                    HorizontalTextAlignment="Center" 
+                    VerticalTextAlignment="Center" 
+                    Text="Casillero" 
+                    Grid.Row="2" 
+                    Grid.Column="0" />
+                <Switch 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" 
+                    x:Name="swCasillero" 
+                    Toggled="swCasillero_Toggled" 
+                    Grid.Row="2" 
+                    Grid.Column="1" />
+                <Label 
+                    HorizontalTextAlignment="Center" 
+                    VerticalTextAlignment="Center" 
+                    Text="Monto inicial" 
+                    Grid.Row="3" 
+                    Grid.Column="0" />
+                <Entry 
+                    HorizontalTextAlignment="Start" 
+                    VerticalOptions="Center" 
+                    x:Name="txtMontoInicial" 
+                    TextChanged="txtMontoInicial_TextChanged" 
+                    Placeholder="Entre 120 y 600" 
+                    Keyboard="Numeric" 
+                    Grid.Row="3" 
+                    Grid.Column="1" />
+                <Button x:Name="btnCalcular" 
+                    VerticalOptions="Center" 
+                    Text="Calcular pago mensual" 
+                    Clicked="btnCalcular_Clicked" 
+                    Grid.Row="4" 
+                    Grid.Column="0" />
+                <Entry 
+                    HorizontalTextAlignment="Start" 
+                    VerticalOptions="Center" 
+                    x:Name="txtPagoMensual" 
+                    Placeholder="Pago mensual" 
+                    IsReadOnly="True" 
+                    Grid.Row="4" 
+                    Grid.Column="1" />
+            </Grid>
+            <Button x:Name="btnVerResumen" VerticalOptions="Center" Text="Ver Resumen" Clicked="btnVerResumen_Clicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+
+

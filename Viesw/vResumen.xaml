@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jjjitalaExamen.Viesw.vResumen" Title="Resumen">
+    <ScrollView>
+        <VerticalStackLayout 
+            Padding="20" 
+            Spacing="20">
+            <Label 
+                HorizontalTextAlignment="Center" 
+                VerticalTextAlignment="Center" 
+                x:Name="lblUsuarioConectado" />
+            <Label 
+                HorizontalTextAlignment="Center" 
+                VerticalTextAlignment="Center" 
+                Text="RESUMEN" />
+            
+            <Grid 
+                RowSpacing="15" 
+                ColumnSpacing="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label 
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    Text="Nombre"
+                    Grid.Row="0"
+                    Grid.Column="0" />
+                <Label 
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    x:Name="lblNombre"
+                    Grid.Row="0"
+                    Grid.Column="1" />
+                <Label 
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    Text="Apellido"
+                    Grid.Row="1"
+                    Grid.Column="0" />
+                <Label 
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    x:Name="lblApellido"
+                    Grid.Row="1"
+                    Grid.Column="1" />
+                <Label 
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    Text="Edad"
+                    Grid.Row="2"
+                    Grid.Column="0" />
+                <Label 
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    x:Name="lblEdad"
+                    Grid.Row="2"
+                    Grid.Column="1" />
+                <Label 
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    Text="Fecha de inicio"
+                    Grid.Row="3"
+                    Grid.Column="0" />
+                <Label 
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    x:Name="lblFechaInicio"
+                    Grid.Row="3"
+                    Grid.Column="1" />
+                <Label 
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    Text="Plan"
+                    Grid.Row="4"
+                    Grid.Column="0" />
+                <Label 
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    x:Name="lblPlan"
+                    Grid.Row="4"
+                    Grid.Column="1" />
+                <Label 
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    Text="Casillero"
+                    Grid.Row="5"
+                    Grid.Column="0" />
+                <Label 
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    x:Name="lblCasillero"
+                    Grid.Row="5"
+                    Grid.Column="1" />
+                <Label 
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    Text="Monto inicial"
+                    Grid.Row="6"
+                    Grid.Column="0" />
+                <Label 
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    x:Name="lblMontoInicial"
+                    Grid.Row="6"
+                    Grid.Column="1" />
+                <Label 
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    Text="Pago mensual"
+                    Grid.Row="7"
+                    Grid.Column="0" />
+                <Label 
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    x:Name="lblPagoMensual"
+                    Grid.Row="7"
+                    Grid.Column="1" />
+                <Label 
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    Text="Pago total"
+                    Grid.Row="8"
+                    Grid.Column="0" />
+                <Label 
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    x:Name="lblPagoTotal"
+                    Grid.Row="8"
+                    Grid.Column="1" />
+            </Grid>
+            <Button VerticalOptions="Center" x:Name="btnExportar" Text="Exportar" Clicked="btnExportar_Clicked" />
+            <Button x:Name="btnCerrarSesion" VerticalOptions="Center" Text="Cerrar sesión" Clicked="btnCerrarSesion_Clicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+
+
