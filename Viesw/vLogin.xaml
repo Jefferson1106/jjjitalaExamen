@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentPage Style="{StaticResource PaginaGlobal}" xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="jjjitalaExamen.Viesw.vLogin" Title="Login">
-    <ScrollView>
-        <VerticalStackLayout 
-            Padding="20" 
-            Spacing="10">
-            <Image Source="login.jpg"
+    <ScrollView Style="{StaticResource DesplazamientoGlobal}">
+        <VerticalStackLayout Style="{StaticResource ContenidoLogin}">
+            <Image Style="{StaticResource ImagenGlobal}" Source="login.jpg"
                    HeightRequest="180"
                    HorizontalOptions="Center"
                    Aspect="AspectFit"
                    SemanticProperties.Description="Imagen de inicio de sesión" />
-            <Label 
-                   HorizontalTextAlignment="Center" 
-                   VerticalTextAlignment="Center" 
-                   Text="Login" />
-            <Grid 
-                  RowSpacing="15" 
-                  ColumnSpacing="15">
+            <Label Style="{StaticResource TituloLogin}" Text="Login" />
+            <Grid Style="{StaticResource CuadriculaExamen}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
@@ -27,32 +20,32 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Label 
+                <Label Style="{StaticResource LabelGlobal}" 
                     HorizontalTextAlignment="Center" 
                     VerticalTextAlignment="Center" 
                     Text="Usuario" 
                     Grid.Row="0" 
                     Grid.Column="0" />
-                <Entry 
+                <Entry Style="{StaticResource EntryGlobal}" 
                     HorizontalTextAlignment="Start" 
                     VerticalOptions="Center" 
                     x:Name="txtUsuario" 
                     Grid.Row="0" 
                     Grid.Column="1" />
-                <Label 
+                <Label Style="{StaticResource LabelGlobal}" 
                     HorizontalTextAlignment="Center" 
                     VerticalTextAlignment="Center" 
                     Text="Contraseña" 
                     Grid.Row="1" 
                     Grid.Column="0" />
-                <Entry 
+                <Entry Style="{StaticResource EntryGlobal}" 
                     HorizontalTextAlignment="Start" 
                     VerticalOptions="Center" 
                     x:Name="txtContrasena" 
                     IsPassword="True" 
                     Grid.Row="1" 
                     Grid.Column="1" />
-                <Button x:Name="btnIniciarSesion" 
+                <Button Style="{StaticResource BotonGlobal}" x:Name="btnIniciarSesion" 
                     VerticalOptions="Center" 
                     Text="Iniciar sesión" 
                     Clicked="btnIniciarSesion_Clicked" 
@@ -60,7 +53,7 @@
                     Grid.Column="0" 
                     Grid.ColumnSpan="2" />
             </Grid>
-            <Button x:Name="btnAcercaDe" 
+            <Button Style="{StaticResource BotonSecundarioGlobal}" x:Name="btnAcercaDe" 
                 VerticalOptions="Center" 
                 Text="Acerca de" 
                 Clicked="btnAcercaDe_Clicked" />

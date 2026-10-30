@@ -5,10 +5,139 @@
              x:Class="jjjitalaExamen.App">
     <Application.Resources>
         <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
+            <Style 
+                x:Key="ContenidoExamen" 
+                TargetType="VerticalStackLayout">
+                <Setter Property="Padding" Value="20" />
+                <Setter Property="Spacing" Value="20" />
+            </Style>
+            <Style x:Key="ContenidoLogin" 
+                   TargetType="VerticalStackLayout">
+                <Setter Property="Padding" Value="20" />
+                <Setter 
+                    Property="Spacing"
+                    Value="10" />
+            </Style>
+            <Style 
+                x:Key="CuadriculaExamen" 
+                TargetType="Grid">
+                <Setter Property="RowSpacing" 
+                        Value="15" />
+                <Setter 
+                    Property="ColumnSpacing" 
+                    Value="15" />
+            </Style>
+            <Style x:Key="TituloExamen" TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" 
+                        Value="Center" />
+                <Setter Property="VerticalTextAlignment" 
+                        Value="Center" />
+                <Setter Property="FontSize" 
+                        Value="22" />
+                <Setter Property="TextColor"
+                        Value="Blue" />
+            </Style>
+            <Style x:Key="TituloLogin" 
+                   TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="TextColor" 
+                        Value="Purple" />
+                <Setter Property="FontSize" 
+                        Value="26" />
+                <Setter Property="FontAttributes"
+                        Value="Bold" />
+            </Style>
+
+            <Style x:Key="PaginaGlobal" TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="#F5F3FF" />
+            </Style>
+            <Style x:Key="DesplazamientoGlobal" TargetType="ScrollView">
+                <Setter Property="VerticalScrollBarVisibility" Value="Default" />
+            </Style>
+            <Style x:Key="ImagenGlobal" TargetType="Image">
+                <Setter Property="HeightRequest" Value="180" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="Aspect" Value="AspectFit" />
+                <Setter Property="Margin" Value="0,0,0,10" />
+            </Style>
+            <Style x:Key="LabelGlobal" TargetType="Label">
+                <Setter Property="TextColor" Value="#4C1D95" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+            </Style>
+            <Style x:Key="UsuarioGlobal" TargetType="Label">
+                <Setter Property="TextColor" Value="#1E3A8A" />
+                <Setter Property="BackgroundColor" Value="#DBEAFE" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Padding" Value="12" />
+            </Style>
+            <Style x:Key="DatoGlobal" TargetType="Label">
+                <Setter Property="TextColor" Value="#1F2937" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="Padding" Value="8" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+            </Style>
+            <Style x:Key="EntryGlobal" TargetType="Entry">
+                <Setter Property="TextColor" Value="#1F2937" />
+                <Setter Property="PlaceholderColor" Value="#6B7280" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="MinimumHeightRequest" Value="48" />
+                <Style.Triggers>
+                    <Trigger TargetType="Entry" Property="IsReadOnly" Value="True">
+                        <Setter Property="BackgroundColor" Value="#DCFCE7" />
+                        <Setter Property="TextColor" Value="#166534" />
+                        <Setter Property="FontAttributes" Value="Bold" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+            <Style x:Key="BotonGlobal" TargetType="Button">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="#6D28D9" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="Padding" Value="12,10" />
+                <Setter Property="MinimumHeightRequest" Value="48" />
+            </Style>
+            <Style x:Key="BotonSecundarioGlobal" TargetType="Button">
+                <Setter Property="TextColor" Value="#4C1D95" />
+                <Setter Property="BackgroundColor" Value="#EDE9FE" />
+                <Setter Property="BorderColor" Value="#6D28D9" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="Padding" Value="12,10" />
+                <Setter Property="MinimumHeightRequest" Value="48" />
+            </Style>
+            <Style x:Key="FechaGlobal" TargetType="DatePicker">
+                <Setter Property="TextColor" Value="#1F2937" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="MinimumHeightRequest" Value="48" />
+                <Setter Property="Format" Value="dd/MM/yyyy" />
+            </Style>
+            <Style x:Key="PlanGlobal" TargetType="Picker">
+                <Setter Property="TextColor" Value="#1F2937" />
+                <Setter Property="TitleColor" Value="#6B7280" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="MinimumHeightRequest" Value="48" />
+            </Style>
+            <Style x:Key="CasilleroGlobal" TargetType="Switch">
+                <Setter Property="OnColor" Value="#C4B5FD" />
+                <Setter Property="ThumbColor" Value="#6D28D9" />
+            </Style>
+
+            <!--<ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
-            </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary.MergedDictionaries>-->
         </ResourceDictionary>
     </Application.Resources>
 </Application>
